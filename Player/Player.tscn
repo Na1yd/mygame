@@ -4,13 +4,17 @@
 [ext_resource type="Script" path="res://Player/Sprite2D.gd" id="2_rt7q5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5fw2c"]
-size = Vector2(126, 125)
+size = Vector2(80, 85.5)
 
 [node name="player" type="Area2D"]
+position = Vector2(-1, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, 0)
+scale = Vector2(0.632813, 0.671875)
 texture = ExtResource("1_cbb7r")
 script = ExtResource("2_rt7q5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 0)
 shape = SubResource("RectangleShape2D_5fw2c")
