@@ -14,5 +14,5 @@ func _process(delta):
 		position.y += 10
 	if Input.is_action_pressed("player_left") and position.x > -280:
 		position.x -= 10
-	if Input.is_action_pressed("player_right") and position.x < 1200:
+	if Input.is_action_pressed("player_right") and position.x < 1551:
 		position.x += 10
