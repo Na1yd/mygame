@@ -1,15 +1,16 @@
 [gd_scene load_steps=3 format=3 uid="uid://dcduwla6mr36s"]
 
-[ext_resource type="Texture2D" uid="uid://birlc57vwm5vl" path="res://icon.svg" id="1_dc4j8"]
+[ext_resource type="Texture2D" uid="uid://ct57sbyft8ypo" path="res://Sprites/brick.png" id="1_1eewg"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3susl"]
-size = Vector2(16, 64)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s3emi"]
+size = Vector2(16, 16)
 
 [node name="Area2D" type="Area2D"]
+rotation = 4.71091
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.125, 0.5)
-texture = ExtResource("1_dc4j8")
+scale = Vector2(0.25, 0.5)
+texture = ExtResource("1_1eewg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_3susl")
+shape = SubResource("RectangleShape2D_s3emi")
