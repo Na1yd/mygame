@@ -1,28 +1,56 @@
-[gd_scene load_steps=5 format=3 uid="uid://delnfl22b65"]
+[gd_scene load_steps=9 format=3 uid="uid://delnfl22b65"]
 
-[ext_resource type="Texture2D" uid="uid://birlc57vwm5vl" path="res://icon.svg" id="1_cbb7r"]
+[ext_resource type="Texture2D" uid="uid://dfotmor3l55au" path="res://New Piskel.png" id="1_ysou3"]
 [ext_resource type="Script" path="res://Player/Sprite2D.gd" id="2_rt7q5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lbarc"]
+atlas = ExtResource("1_ysou3")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xd2y8"]
+atlas = ExtResource("1_ysou3")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aw12b"]
+atlas = ExtResource("1_ysou3")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ihmgb"]
+atlas = ExtResource("1_ysou3")
+region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0nqfg"]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lbarc")
+}],
 "loop": true,
-"name": &"Down",
+"name": &"down",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xd2y8")
+}],
 "loop": true,
-"name": &"Left",
+"name": &"left",
 "speed": 5.0
 }, {
-"frames": [],
-"loop": true,
-"name": &"Up",
-"speed": 5.0
-}, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aw12b")
+}],
 "loop": true,
 "name": &"right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ihmgb")
+}],
+"loop": true,
+"name": &"up",
 "speed": 5.0
 }]
 
@@ -35,12 +63,11 @@ position = Vector2(-1, 1)
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(1, 0)
 scale = Vector2(0.632813, 0.671875)
-texture = ExtResource("1_cbb7r")
 script = ExtResource("2_rt7q5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite2D"]
 sprite_frames = SubResource("SpriteFrames_0nqfg")
-animation = &"Up"
+animation = &"up"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 0)
