@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://ct57sbyft8ypo" path="res://Sprites/brick.png" id="1_bm3tt"]
 [ext_resource type="PackedScene" uid="uid://delnfl22b65" path="res://Player/Player.tscn" id="1_kybx2"]
 [ext_resource type="Texture2D" uid="uid://dipmchlumnjcn" path="res://Sprites/broken brick.png" id="2_71uan"]
-[ext_resource type="PackedScene" uid="uid://b58nxb5qul70x" path="res://Weapons/bullet_right.tscn" id="4_1yirb"]
+[ext_resource type="PackedScene" uid="uid://dmhptscck2uau" path="res://Weapons/bullet.tscn" id="4_1yirb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0kbpy"]
 resource_name = "Tile"

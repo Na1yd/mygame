@@ -55,7 +55,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5fw2c"]
-size = Vector2(80, 85.5)
+size = Vector2(16, 24)
 
 [node name="player" type="Area2D"]
 position = Vector2(-1, 1)
@@ -70,5 +70,8 @@ sprite_frames = SubResource("SpriteFrames_0nqfg")
 animation = &"up"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 0)
+position = Vector2(1, 3)
 shape = SubResource("RectangleShape2D_5fw2c")
+
+[node name="Muzzle" type="Marker2D" parent="."]
+position = Vector2(9, 4)
