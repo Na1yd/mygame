@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://ct57sbyft8ypo" path="res://Sprites/brick.png" id="1_bm3tt"]
 [ext_resource type="PackedScene" uid="uid://delnfl22b65" path="res://Player/Player.tscn" id="1_kybx2"]
 [ext_resource type="Texture2D" uid="uid://dipmchlumnjcn" path="res://Sprites/broken brick.png" id="2_71uan"]
-[ext_resource type="PackedScene" uid="uid://dmhptscck2uau" path="res://Weapons/bullet.tscn" id="4_1yirb"]
+[ext_resource type="PackedScene" uid="uid://dmhptscck2uau" path="res://Weapons/bullet_right.tscn" id="4_1yirb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0kbpy"]
 resource_name = "Tile"
@@ -33,7 +33,12 @@ layer_0/tile_data = PackedInt32Array(0, 0, 0, 65536, 0, 1, 1, 65536, 0, 65537, 6
 
 [node name="player" parent="." instance=ExtResource("1_kybx2")]
 position = Vector2(328, 185)
-priority = 967490
+
+[node name="Camera2D" type="Camera2D" parent="player"]
+position = Vector2(5.37, -2.2)
+zoom = Vector2(2, 2)
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
 
 [node name="Area2D" parent="." instance=ExtResource("4_1yirb")]
 position = Vector2(408, 176)
