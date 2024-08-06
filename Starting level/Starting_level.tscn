@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://duf1g3oxf3j8h"]
+[gd_scene load_steps=9 format=3 uid="uid://duf1g3oxf3j8h"]
 
 [ext_resource type="Texture2D" uid="uid://ct57sbyft8ypo" path="res://Sprites/brick.png" id="1_bm3tt"]
 [ext_resource type="PackedScene" uid="uid://delnfl22b65" path="res://Player/Player.tscn" id="1_kybx2"]
 [ext_resource type="Texture2D" uid="uid://dipmchlumnjcn" path="res://Sprites/broken brick.png" id="2_71uan"]
 [ext_resource type="PackedScene" uid="uid://dmhptscck2uau" path="res://Weapons/bullet_right.tscn" id="4_1yirb"]
+[ext_resource type="PackedScene" uid="uid://w6wornlf4kqk" path="res://bad guys/meat_chunk.tscn" id="4_4nx7m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0kbpy"]
 resource_name = "Tile"
@@ -39,6 +40,9 @@ position = Vector2(5.37, -2.2)
 zoom = Vector2(2, 2)
 position_smoothing_enabled = true
 position_smoothing_speed = 10.0
+
+[node name="Meat chunk" parent="." instance=ExtResource("4_4nx7m")]
+position = Vector2(472, 192)
 
 [node name="Area2D" parent="." instance=ExtResource("4_1yirb")]
 position = Vector2(408, 176)

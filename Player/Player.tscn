@@ -1,23 +1,23 @@
 [gd_scene load_steps=10 format=3 uid="uid://delnfl22b65"]
 
 [ext_resource type="Script" path="res://Player/Player.gd" id="1_p8f6x"]
-[ext_resource type="Texture2D" uid="uid://dfotmor3l55au" path="res://New Piskel.png" id="1_ysou3"]
+[ext_resource type="Texture2D" uid="uid://dfotmor3l55au" path="res://Sprites/New Piskel.png" id="2_ecrn0"]
 [ext_resource type="Script" path="res://Player/Timer.gd" id="3_8muou"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lbarc"]
-atlas = ExtResource("1_ysou3")
+atlas = ExtResource("2_ecrn0")
 region = Rect2(32, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xd2y8"]
-atlas = ExtResource("1_ysou3")
+atlas = ExtResource("2_ecrn0")
 region = Rect2(0, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_aw12b"]
-atlas = ExtResource("1_ysou3")
+atlas = ExtResource("2_ecrn0")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ihmgb"]
-atlas = ExtResource("1_ysou3")
+atlas = ExtResource("2_ecrn0")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0nqfg"]
@@ -76,8 +76,8 @@ shape = SubResource("RectangleShape2D_5fw2c")
 
 [node name="Timer" type="Timer" parent="."]
 process_callback = 0
+one_shot = true
 autostart = true
 script = ExtResource("3_8muou")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
-[connection signal="timeout" from="Timer" to="Timer" method="_on_timeout_timeout"]

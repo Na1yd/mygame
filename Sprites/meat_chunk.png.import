@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfotmor3l55au"
-path="res://.godot/imported/New Piskel.png-4b57200a9b5d4d6f89cce1bdbbdb2eec.ctex"
+uid="uid://u4sofwpmwuah"
+path="res://.godot/imported/meat_chunk.png-b1b5dda51a13a783f25d04a8f76cceae.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://New Piskel.png"
-dest_files=["res://.godot/imported/New Piskel.png-4b57200a9b5d4d6f89cce1bdbbdb2eec.ctex"]
+source_file="res://Sprites/meat_chunk.png"
+dest_files=["res://.godot/imported/meat_chunk.png-b1b5dda51a13a783f25d04a8f76cceae.ctex"]
 
 [params]
 

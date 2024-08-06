@@ -1,0 +1,52 @@
+[gd_scene load_steps=8 format=3 uid="uid://w6wornlf4kqk"]
+
+[ext_resource type="Texture2D" uid="uid://u4sofwpmwuah" path="res://Sprites/meat_chunk.png" id="1_omhfr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n1rl3"]
+atlas = ExtResource("1_omhfr")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j5kar"]
+atlas = ExtResource("1_omhfr")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lcwai"]
+atlas = ExtResource("1_omhfr")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uqisv"]
+atlas = ExtResource("1_omhfr")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ksisb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n1rl3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j5kar")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lcwai")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uqisv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7ea27"]
+size = Vector2(22, 19)
+
+[node name="Meat chunk" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ksisb")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_7ea27")
