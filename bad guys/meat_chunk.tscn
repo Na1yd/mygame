@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://w6wornlf4kqk"]
+[gd_scene load_steps=9 format=3 uid="uid://w6wornlf4kqk"]
 
 [ext_resource type="Texture2D" uid="uid://u4sofwpmwuah" path="res://Sprites/meat_chunk.png" id="1_omhfr"]
+[ext_resource type="Script" path="res://bad guys/meat_chunk.gd" id="1_tbvjr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n1rl3"]
 atlas = ExtResource("1_omhfr")
@@ -42,6 +43,7 @@ animations = [{
 size = Vector2(22, 19)
 
 [node name="Meat chunk" type="CharacterBody2D"]
+script = ExtResource("1_tbvjr")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_ksisb")
