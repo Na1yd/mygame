@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @onready var player = get_node("%player")
 
+
 #speed
 @export_range(50,500) var speed : float = 250
 
@@ -13,3 +14,4 @@ func _process(delta):
 	velocity = direction * speed
 	move_and_slide()
 	
+
