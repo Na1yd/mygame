@@ -5,7 +5,7 @@ extends Area2D
 @onready var bullets_U = preload("res://Weapons/bullet_up.tscn")
 @onready var bullets_D = preload("res://Weapons/bullet_down.tscn")
 
-var hit = 0
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -16,10 +16,14 @@ func _ready():
 
 
 
-
+var hit = 0
 
 
 func _on_area_entered(area):
-	var enemie = get_parent()
-	enemie.queue_free()
+	if not area == $Area2D:
+		hit += 1
+		print(hit)
+		if hit >= 3:
+			var enemie = get_parent()
+			enemie.queue_free()
 

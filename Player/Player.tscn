@@ -1,30 +1,30 @@
 [gd_scene load_steps=10 format=3 uid="uid://delnfl22b65"]
 
 [ext_resource type="Script" path="res://Player/Player.gd" id="1_p8f6x"]
-[ext_resource type="Texture2D" uid="uid://dfotmor3l55au" path="res://Sprites/New Piskel.png" id="2_ecrn0"]
+[ext_resource type="Texture2D" uid="uid://b73ikumv7eeyx" path="res://Sprites/Player.png" id="2_rgr0u"]
 [ext_resource type="Script" path="res://Player/Timer.gd" id="3_8muou"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_lbarc"]
-atlas = ExtResource("2_ecrn0")
+[sub_resource type="AtlasTexture" id="AtlasTexture_74fty"]
+atlas = ExtResource("2_rgr0u")
 region = Rect2(32, 32, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xd2y8"]
-atlas = ExtResource("2_ecrn0")
+[sub_resource type="AtlasTexture" id="AtlasTexture_m4lcb"]
+atlas = ExtResource("2_rgr0u")
 region = Rect2(0, 32, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_aw12b"]
-atlas = ExtResource("2_ecrn0")
+[sub_resource type="AtlasTexture" id="AtlasTexture_iw42b"]
+atlas = ExtResource("2_rgr0u")
 region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ihmgb"]
-atlas = ExtResource("2_ecrn0")
+[sub_resource type="AtlasTexture" id="AtlasTexture_t50ft"]
+atlas = ExtResource("2_rgr0u")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0nqfg"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_lbarc")
+"texture": SubResource("AtlasTexture_74fty")
 }],
 "loop": true,
 "name": &"down",
@@ -32,7 +32,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_xd2y8")
+"texture": SubResource("AtlasTexture_m4lcb")
 }],
 "loop": true,
 "name": &"left",
@@ -40,7 +40,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_aw12b")
+"texture": SubResource("AtlasTexture_iw42b")
 }],
 "loop": true,
 "name": &"right",
@@ -48,7 +48,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ihmgb")
+"texture": SubResource("AtlasTexture_t50ft")
 }],
 "loop": true,
 "name": &"up",
@@ -68,7 +68,7 @@ scale = Vector2(0.632813, 0.671875)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite2D"]
 sprite_frames = SubResource("SpriteFrames_0nqfg")
-animation = &"up"
+animation = &"down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 1.5)

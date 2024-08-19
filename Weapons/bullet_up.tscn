@@ -1,10 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://b1lo10k7fxsyh"]
 
 [ext_resource type="Script" path="res://Weapons/bullet up.gd" id="1_831ea"]
-[ext_resource type="Texture2D" uid="uid://ct57sbyft8ypo" path="res://Sprites/brick.png" id="2_1vgp3"]
+[ext_resource type="Texture2D" uid="uid://dfotmor3l55au" path="res://Sprites/bullet.png" id="2_6qav7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s3emi"]
-size = Vector2(8.01183, 16)
+size = Vector2(8.00295, 3.99704)
 
 [node name="bullet left" type="Area2D"]
 rotation = 4.71091
@@ -12,9 +12,10 @@ script = ExtResource("1_831ea")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(2.38419e-07, 0)
-rotation = 3.14159
+rotation = 1.5708
 scale = Vector2(0.1, 0.2)
-texture = ExtResource("2_1vgp3")
+texture = ExtResource("2_6qav7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.00443897, 0.00739515)
 shape = SubResource("RectangleShape2D_s3emi")

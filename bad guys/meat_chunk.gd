@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
-@onready var player = get_node("%player")
-
+#this is set to point to the player
+var player : Node2D
 
 #speed
 @export_range(50,500) var speed : float = 250
