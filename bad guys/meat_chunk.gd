@@ -5,7 +5,7 @@ var player : Node2D
 var exit = 0
 
 #speed
-@export_range(50,500) var speed : float = 250
+@export_range(20,300) var speed : float = 100
 
 func _ready():
 	pass

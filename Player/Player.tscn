@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://delnfl22b65"]
+[gd_scene load_steps=12 format=3 uid="uid://delnfl22b65"]
 
 [ext_resource type="Script" path="res://Player/Player.gd" id="1_p8f6x"]
 [ext_resource type="Texture2D" uid="uid://b73ikumv7eeyx" path="res://Sprites/Player.png" id="2_rgr0u"]
 [ext_resource type="Script" path="res://Player/Timer.gd" id="3_8muou"]
+[ext_resource type="Script" path="res://Player/hit_box.gd" id="3_up5xg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_74fty"]
 atlas = ExtResource("2_rgr0u")
@@ -56,7 +57,10 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5fw2c"]
-size = Vector2(14, 17)
+size = Vector2(14, 19)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_slf5d"]
+size = Vector2(14, 19)
 
 [node name="player" type="CharacterBody2D"]
 position = Vector2(-1, 1)
@@ -74,10 +78,19 @@ animation = &"down"
 position = Vector2(1, 1.5)
 shape = SubResource("RectangleShape2D_5fw2c")
 
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(1, -1)
+script = ExtResource("3_up5xg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 2.5)
+shape = SubResource("RectangleShape2D_slf5d")
+
 [node name="Timer" type="Timer" parent="."]
 process_callback = 0
 one_shot = true
 autostart = true
 script = ExtResource("3_8muou")
 
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

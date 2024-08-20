@@ -29,6 +29,8 @@ sources/1 = SubResource("TileSetAtlasSource_r7f45")
 [node name="Main game level" type="Node2D"]
 script = ExtResource("1_c0s04")
 
+[node name="Timer" type="Timer" parent="."]
+
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_rsfd3")
 format = 2
@@ -49,3 +51,5 @@ position = Vector2(408, 176)
 
 [node name="Gate" parent="." instance=ExtResource("6_pe74u")]
 position = Vector2(896, -32)
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

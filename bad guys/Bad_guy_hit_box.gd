@@ -22,8 +22,9 @@ var hit = 0
 func _on_area_entered(area):
 	if not area == $Area2D:
 		hit += 1
-		print(hit)
 		if hit >= 3:
+			
+			Global.enemies_killed += 1
 			var enemie = get_parent()
 			enemie.queue_free()
 			
