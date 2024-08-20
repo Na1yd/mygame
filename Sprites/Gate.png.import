@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://brltir4n7x8ci"
-path="res://.godot/imported/Work in progress.icon.png-a88cb6a7a0ff018a1ed8ab4d67f77126.ctex"
+uid="uid://cnixohntbg3eb"
+path="res://.godot/imported/Gate.png-0b406c82cd815f015cfebc48ae259ede.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://website/Work in progress.icon.png"
-dest_files=["res://.godot/imported/Work in progress.icon.png-a88cb6a7a0ff018a1ed8ab4d67f77126.ctex"]
+source_file="res://Sprites/Gate.png"
+dest_files=["res://.godot/imported/Gate.png-0b406c82cd815f015cfebc48ae259ede.ctex"]
 
 [params]
 

@@ -26,4 +26,5 @@ func _on_area_entered(area):
 		if hit >= 3:
 			var enemie = get_parent()
 			enemie.queue_free()
+			
 

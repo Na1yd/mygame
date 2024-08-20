@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://duf1g3oxf3j8h"]
+[gd_scene load_steps=10 format=3 uid="uid://duf1g3oxf3j8h"]
 
 [ext_resource type="Texture2D" uid="uid://ct57sbyft8ypo" path="res://Sprites/brick.png" id="1_bm3tt"]
 [ext_resource type="Script" path="res://Starting level/Starting_level.gd" id="1_c0s04"]
 [ext_resource type="PackedScene" uid="uid://delnfl22b65" path="res://Player/Player.tscn" id="1_kybx2"]
 [ext_resource type="Texture2D" uid="uid://dipmchlumnjcn" path="res://Sprites/broken brick.png" id="2_71uan"]
 [ext_resource type="PackedScene" uid="uid://dmhptscck2uau" path="res://Weapons/bullet_right.tscn" id="4_1yirb"]
+[ext_resource type="PackedScene" uid="uid://bsecofj8qggk5" path="res://Exit/next_level.tscn" id="6_pe74u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0kbpy"]
 resource_name = "Tile"
@@ -45,3 +46,6 @@ position_smoothing_speed = 10.0
 
 [node name="Area2D" parent="." instance=ExtResource("4_1yirb")]
 position = Vector2(408, 176)
+
+[node name="Gate" parent="." instance=ExtResource("6_pe74u")]
+position = Vector2(896, -32)
