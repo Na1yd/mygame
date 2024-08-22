@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://f5dqafevu8gu"]
+
+[ext_resource type="Script" path="res://Game over/game_over.gd" id="1_oixmm"]
+[ext_resource type="Texture2D" uid="uid://ntg1q1ksvteh" path="res://Sprites/Explosion.png" id="2_h17i0"]
+
+[node name="Game over" type="Node2D"]
+script = ExtResource("1_oixmm")
+
+[node name="Explosion" type="Sprite2D" parent="."]
+texture = ExtResource("2_h17i0")
+
+[node name="Camera2D" type="Camera2D" parent="Explosion"]
+zoom = Vector2(60, 35)
+
+[node name="Button" type="Button" parent="Explosion"]
+offset_left = -13.0
+offset_right = 13.0
+offset_bottom = 13.0
+
+[connection signal="pressed" from="Explosion/Button" to="." method="_on_button_pressed"]

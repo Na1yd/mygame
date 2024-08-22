@@ -1,0 +1,67 @@
+[gd_scene load_steps=11 format=3 uid="uid://cljdre0awkjjd"]
+
+[ext_resource type="Script" path="res://bad guys/meat_chunke.gd" id="1_ldy5k"]
+[ext_resource type="Texture2D" uid="uid://cxs7j4tm82suk" path="res://Sprites/meat_chunke.png" id="2_gkg13"]
+[ext_resource type="Script" path="res://bad guys/Meat chunke hit box.gd" id="3_mgd31"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ycaph"]
+atlas = ExtResource("2_gkg13")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_20w3p"]
+atlas = ExtResource("2_gkg13")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_okpxp"]
+atlas = ExtResource("2_gkg13")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8sac8"]
+atlas = ExtResource("2_gkg13")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6taa0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ycaph")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_20w3p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_okpxp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8sac8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7ea27"]
+size = Vector2(11, 11)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r5cos"]
+size = Vector2(22, 19)
+
+[node name="Meat chunk" type="CharacterBody2D"]
+script = ExtResource("1_ldy5k")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_6taa0")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_7ea27")
+
+[node name="Meat chunk hit box" type="Area2D" parent="."]
+script = ExtResource("3_mgd31")
+
+[node name="Area2D" type="CollisionShape2D" parent="Meat chunk hit box"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_r5cos")
+
+[connection signal="area_entered" from="Meat chunk hit box" to="Meat chunk hit box" method="_on_area_entered"]

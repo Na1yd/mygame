@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://u4sofwpmwuah" path="res://Sprites/meat_chunk.png" id="1_omhfr"]
 [ext_resource type="Script" path="res://bad guys/meat_chunk.gd" id="1_tbvjr"]
-[ext_resource type="Script" path="res://bad guys/Bad_guy_hit_box.gd" id="3_b27ew"]
+[ext_resource type="Script" path="res://bad guys/Meat chunk hit box.gd" id="3_3bppu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n1rl3"]
 atlas = ExtResource("1_omhfr")
@@ -12,11 +12,11 @@ region = Rect2(0, 0, 32, 32)
 atlas = ExtResource("1_omhfr")
 region = Rect2(32, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_lcwai"]
-atlas = ExtResource("1_omhfr")
-region = Rect2(0, 32, 32, 32)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_uqisv"]
+atlas = ExtResource("1_omhfr")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2nmb2"]
 atlas = ExtResource("1_omhfr")
 region = Rect2(32, 32, 32, 32)
 
@@ -30,10 +30,10 @@ animations = [{
 "texture": SubResource("AtlasTexture_j5kar")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_lcwai")
+"texture": SubResource("AtlasTexture_uqisv")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_uqisv")
+"texture": SubResource("AtlasTexture_2nmb2")
 }],
 "loop": true,
 "name": &"default",
@@ -41,7 +41,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ea27"]
-size = Vector2(22, 19)
+size = Vector2(11, 11)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r5cos"]
 size = Vector2(22, 19)
@@ -51,14 +51,13 @@ script = ExtResource("1_tbvjr")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_ksisb")
-autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 0.5)
+position = Vector2(-0.5, -0.5)
 shape = SubResource("RectangleShape2D_7ea27")
 
 [node name="Meat chunk hit box" type="Area2D" parent="."]
-script = ExtResource("3_b27ew")
+script = ExtResource("3_3bppu")
 
 [node name="Area2D" type="CollisionShape2D" parent="Meat chunk hit box"]
 position = Vector2(0, 0.5)
