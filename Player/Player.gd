@@ -1,5 +1,5 @@
 extends CharacterBody2D
-
+class_name player
 var speed = 5
 var time_end = 0
 
