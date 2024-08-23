@@ -31,3 +31,7 @@ func _on_timer_timeout():
 			chunke.position.x = RandomNumberGenerator.new().randf_range(0.0, 1910.0)
 			chunke.player = $player
 	$Timer.start()
+	
+	
+	
+

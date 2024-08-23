@@ -8,6 +8,8 @@ var time_end = 0
 @onready var bullets_R = preload("res://Weapons/bullet_left.tscn")
 @onready var bullets_U = preload("res://Weapons/bullet_up.tscn")
 @onready var bullets_D = preload("res://Weapons/bullet_down.tscn")
+
+
 #projectile timer
 func _on_start():
 	$Timer.start()
@@ -63,5 +65,8 @@ func _on_timer_timeout():
 		time_end = 0
 		
 	$Timer.start()
+	
+
+
 
 

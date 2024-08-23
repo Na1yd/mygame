@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://duf1g3oxf3j8h"]
+[gd_scene load_steps=13 format=3 uid="uid://duf1g3oxf3j8h"]
 
 [ext_resource type="Texture2D" uid="uid://ct57sbyft8ypo" path="res://Sprites/brick.png" id="1_bm3tt"]
 [ext_resource type="Script" path="res://Starting level/Starting_level.gd" id="1_c0s04"]
@@ -26,6 +26,29 @@ texture = ExtResource("2_71uan")
 sources/0 = SubResource("TileSetAtlasSource_0kbpy")
 sources/1 = SubResource("TileSetAtlasSource_r7f45")
 
+[sub_resource type="SystemFont" id="SystemFont_u0mio"]
+
+[sub_resource type="FontFile" id="FontFile_x2vrj"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/32/0 = Vector2(0, 0)
+cache/0/32/0/ascent = 0.0
+cache/0/32/0/descent = 0.0
+cache/0/32/0/underline_position = 0.0
+cache/0/32/0/underline_thickness = 0.0
+cache/0/32/0/scale = 1.0
+cache/0/32/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/32/0/kerning_overrides/32/0 = Vector2(0, 0)
+
+[sub_resource type="Theme" id="Theme_w32t2"]
+default_font = SubResource("FontFile_x2vrj")
+default_font_size = 32
+/fonts/cursive = SubResource("SystemFont_u0mio")
+
 [node name="Main game level" type="Node2D"]
 script = ExtResource("1_c0s04")
 
@@ -52,4 +75,20 @@ position = Vector2(408, 176)
 [node name="Gate" parent="." instance=ExtResource("6_pe74u")]
 position = Vector2(896, -32)
 
+[node name="Game_ui" type="Control" parent="Gate"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -896.0
+offset_top = 32.0
+offset_right = -856.0
+offset_bottom = 72.0
+theme = SubResource("Theme_w32t2")
+
+[node name="Level_label" type="Label" parent="Gate/Game_ui"]
+layout_mode = 1
+offset_right = 40.0
+offset_bottom = 40.0
+text = "Level 1"
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="level_increase" from="Gate" to="Gate" method="_on_level_increase"]
