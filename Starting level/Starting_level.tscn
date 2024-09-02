@@ -227,10 +227,10 @@ theme = SubResource("Theme_42nw2")
 
 [node name="Health_labal" type="Label" parent="UI/CanvasLayer/Health_ui"]
 layout_mode = 0
-offset_left = -174.0
-offset_top = -163.0
-offset_right = -89.0
-offset_bottom = -114.0
+offset_left = -130.37
+offset_top = -161.8
+offset_right = -38.37
+offset_bottom = -112.8
 text = "Hp: 10"
 
 [node name="Kill_amount_ui" type="Control" parent="UI/CanvasLayer"]
