@@ -1,6 +1,8 @@
-[gd_scene load_steps=32 format=3 uid="uid://duf1g3oxf3j8h"]
+[gd_scene load_steps=36 format=3 uid="uid://duf1g3oxf3j8h"]
 
 [ext_resource type="Script" path="res://Starting level/Starting_level.gd" id="1_c0s04"]
+[ext_resource type="Texture2D" uid="uid://ct57sbyft8ypo" path="res://Sprites/brick.png" id="2_0rtjr"]
+[ext_resource type="Texture2D" uid="uid://dipmchlumnjcn" path="res://Sprites/broken brick.png" id="3_hrfil"]
 [ext_resource type="Script" path="res://Player/Player.gd" id="4_8u8sn"]
 [ext_resource type="Texture2D" uid="uid://dbybl33516r2l" path="res://Player.png" id="5_md0yx"]
 [ext_resource type="Script" path="res://Player/hit box.gd" id="6_b45st"]
@@ -9,7 +11,23 @@
 [ext_resource type="Script" path="res://Starting level/Level_label.gd" id="9_qqynf"]
 [ext_resource type="Script" path="res://Scripts/Enemie_kill_labal.gd" id="10_t4nhr"]
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ypqty"]
+texture = ExtResource("2_0rtjr")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f5lns"]
+texture = ExtResource("3_hrfil")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_rsfd3"]
+sources/0 = SubResource("TileSetAtlasSource_ypqty")
+sources/1 = SubResource("TileSetAtlasSource_f5lns")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ow421"]
 atlas = ExtResource("5_md0yx")
