@@ -24,20 +24,20 @@ func _ready():
 func _process(delta):
 	if Input.is_action_pressed("player_up") and position.y > 0:
 		position.y -= speed
-	if Input.is_action_pressed("player_up") and anim.is_playing("up") == false:
-		anim.play("up")
+	if Input.is_action_pressed("player_up"):
+			anim.play("up")
 	if Input.is_action_pressed("player_down") and position.y < 1014:
 		position.y += speed
-	if Input.is_action_pressed("player_down") and anim.is_playing("down") == false:
+	if Input.is_action_pressed("player_down"):
 		anim.play("down")
-	if Input.is_action_pressed("player_left") and position.x > 0:
-		position.x -= speed
-	if Input.is_action_pressed("player_left") and anim.is_playing("left") == false:
-			anim.play("left")
 	if Input.is_action_pressed("player_right") and position.x < 1910:
 		position.x += speed
-	if Input.is_action_pressed("player_right") and anim.is_playing("right") == false:
+	if Input.is_action_pressed("player_right"):
 			anim.play("right")
+	if Input.is_action_pressed("player_left") and position.x > 0:
+		position.x -= speed
+	if Input.is_action_pressed("player_left"):
+			anim.play("left")
 			
 
 
