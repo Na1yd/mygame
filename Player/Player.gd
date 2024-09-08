@@ -1,6 +1,5 @@
 extends CharacterBody2D
 class_name player
-var speed = 5
 var time_end = 0
 
 @onready var anim = $AnimatedSprite2D
@@ -23,19 +22,19 @@ func _ready():
 
 func _process(delta):
 	if Input.is_action_pressed("player_up") and position.y > 0:
-		position.y -= speed
+		position.y -= Global.speed
 	if Input.is_action_pressed("player_up"):
 			anim.play("up")
 	if Input.is_action_pressed("player_down") and position.y < 1014:
-		position.y += speed
+		position.y += Global.speed
 	if Input.is_action_pressed("player_down"):
 		anim.play("down")
 	if Input.is_action_pressed("player_right") and position.x < 1910:
-		position.x += speed
+		position.x += Global.speed
 	if Input.is_action_pressed("player_right"):
 			anim.play("right")
 	if Input.is_action_pressed("player_left") and position.x > 0:
-		position.x -= speed
+		position.x -= Global.speed
 	if Input.is_action_pressed("player_left"):
 			anim.play("left")
 			

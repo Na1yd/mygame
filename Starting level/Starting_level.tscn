@@ -171,9 +171,9 @@ size = Vector2(10, 15)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_slf5d"]
 size = Vector2(14, 19)
 
-[sub_resource type="SystemFont" id="SystemFont_u0mio"]
+[sub_resource type="SystemFont" id="SystemFont_x5q4i"]
 
-[sub_resource type="FontFile" id="FontFile_x2vrj"]
+[sub_resource type="FontFile" id="FontFile_qgnv3"]
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0
@@ -190,11 +190,11 @@ cache/0/32/0/kerning_overrides/16/0 = Vector2(0, 0)
 cache/0/32/0/kerning_overrides/32/0 = Vector2(0, 0)
 
 [sub_resource type="Theme" id="Theme_w32t2"]
-default_font = SubResource("FontFile_x2vrj")
+default_font = SubResource("FontFile_qgnv3")
 default_font_size = 32
-/fonts/cursive = SubResource("SystemFont_u0mio")
+/fonts/cursive = SubResource("SystemFont_x5q4i")
 
-[sub_resource type="FontFile" id="FontFile_r8xxx"]
+[sub_resource type="FontFile" id="FontFile_cfsv7"]
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0
@@ -211,10 +211,10 @@ cache/0/32/0/kerning_overrides/16/0 = Vector2(0, 0)
 cache/0/32/0/kerning_overrides/32/0 = Vector2(0, 0)
 
 [sub_resource type="Theme" id="Theme_42nw2"]
-default_font = SubResource("FontFile_r8xxx")
+default_font = SubResource("FontFile_cfsv7")
 default_font_size = 32
 
-[sub_resource type="FontFile" id="FontFile_nbmc6"]
+[sub_resource type="FontFile" id="FontFile_4rnpa"]
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0
@@ -223,7 +223,7 @@ cache/0/16/0/scale = 1.0
 cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
 
 [sub_resource type="Theme" id="Theme_ospnb"]
-default_font = SubResource("FontFile_nbmc6")
+default_font = SubResource("FontFile_4rnpa")
 
 [node name="Main game level" type="Node2D"]
 script = ExtResource("1_c0s04")
