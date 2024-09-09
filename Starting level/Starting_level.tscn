@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://duf1g3oxf3j8h"]
+[gd_scene load_steps=35 format=3 uid="uid://duf1g3oxf3j8h"]
 
 [ext_resource type="Script" path="res://Starting level/Starting_level.gd" id="1_c0s04"]
 [ext_resource type="Texture2D" uid="uid://ct57sbyft8ypo" path="res://Sprites/brick.png" id="2_0rtjr"]
@@ -44,10 +44,6 @@ region = Rect2(64, 32, 32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_smhmh"]
 atlas = ExtResource("5_md0yx")
 region = Rect2(0, 96, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1ug7g"]
-atlas = ExtResource("5_md0yx")
-region = Rect2(32, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kuel8"]
 atlas = ExtResource("5_md0yx")
@@ -112,9 +108,6 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1ug7g")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_kuel8")
 }, {
@@ -266,8 +259,8 @@ autostart = true
 script = ExtResource("7_8io0f")
 
 [node name="Camera2D" type="Camera2D" parent="player"]
-position = Vector2(5.37, -2.2)
-zoom = Vector2(5, 5)
+position = Vector2(6.37, 0.8)
+zoom = Vector2(3, 3)
 position_smoothing_enabled = true
 position_smoothing_speed = 10.0
 

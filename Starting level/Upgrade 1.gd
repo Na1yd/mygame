@@ -1,17 +1,31 @@
 extends Button
+var Text = ""
 
-func _on_ready():
+func _ready():
 	var Upgrade = RandomNumberGenerator.new().randf_range(0, 3)
 	print(Upgrade)
+	print("yes")
 	if Upgrade >= 1 and Upgrade <= 2:
-		text = "Bullet slowed"
+		Text = "Bullet slowed"
+		$"Upgrade label 1".text = "Bullet slowed"
 	if Upgrade >= 1 and Upgrade <= 3:
-		text = "Player speed"
+		Text = "Player speed"
+		$"Upgrade label 1".text = "Player speed"
 	if Upgrade >= 2 and Upgrade <= 3:
-		text = "Bullet size"
+		Text = "Bullet size"
+		$"Upgrade label 1".text = "Bullet size"
 	if Upgrade >= 0 and Upgrade <= 1:
-		text = "Idk man"
+		Text = "Idk man"
+		$"Upgrade label 1".text = "Idk man"
 
-func _on_button_pressed():
-	if text == "Bullet speed":
+
+
+func _on_button_up():
+	if Text == "Bullet speed":
 		Global.bullet_speed -= 5
+	if Text == "Player speed":
+		Global.speed += 1
+	if Text == "Bullet size":
+		Global.bullet_speed -= 5
+	if Text == "Idk man":
+		Global.speed += 1
