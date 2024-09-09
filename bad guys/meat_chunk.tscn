@@ -1,39 +1,109 @@
-[gd_scene load_steps=11 format=3 uid="uid://w6wornlf4kqk"]
+[gd_scene load_steps=20 format=3 uid="uid://w6wornlf4kqk"]
 
 [ext_resource type="Texture2D" uid="uid://u4sofwpmwuah" path="res://Sprites/meat_chunk.png" id="1_omhfr"]
 [ext_resource type="Script" path="res://bad guys/meat_chunk.gd" id="1_tbvjr"]
 [ext_resource type="Script" path="res://bad guys/Meat chunk hit box.gd" id="3_3bppu"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_n1rl3"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_vgjfn"]
 atlas = ExtResource("1_omhfr")
 region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_j5kar"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_v3iwj"]
 atlas = ExtResource("1_omhfr")
-region = Rect2(32, 0, 32, 32)
+region = Rect2(0, 32, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_uqisv"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_53sp0"]
 atlas = ExtResource("1_omhfr")
-region = Rect2(32, 32, 32, 32)
+region = Rect2(0, 64, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2nmb2"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_kwk0w"]
 atlas = ExtResource("1_omhfr")
-region = Rect2(32, 32, 32, 32)
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mp2vo"]
+atlas = ExtResource("1_omhfr")
+region = Rect2(0, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iy8ao"]
+atlas = ExtResource("1_omhfr")
+region = Rect2(0, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cvp23"]
+atlas = ExtResource("1_omhfr")
+region = Rect2(0, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7l4wb"]
+atlas = ExtResource("1_omhfr")
+region = Rect2(0, 224, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ch38p"]
+atlas = ExtResource("1_omhfr")
+region = Rect2(0, 256, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7adcf"]
+atlas = ExtResource("1_omhfr")
+region = Rect2(0, 288, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_82jns"]
+atlas = ExtResource("1_omhfr")
+region = Rect2(0, 320, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tllge"]
+atlas = ExtResource("1_omhfr")
+region = Rect2(0, 352, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lqvta"]
+atlas = ExtResource("1_omhfr")
+region = Rect2(0, 384, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_61e8k"]
+atlas = ExtResource("1_omhfr")
+region = Rect2(0, 416, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ksisb"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_n1rl3")
+"texture": SubResource("AtlasTexture_vgjfn")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_j5kar")
+"texture": SubResource("AtlasTexture_v3iwj")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_uqisv")
+"texture": SubResource("AtlasTexture_53sp0")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_2nmb2")
+"texture": SubResource("AtlasTexture_kwk0w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mp2vo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iy8ao")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cvp23")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7l4wb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ch38p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7adcf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_82jns")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tllge")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lqvta")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_61e8k")
 }],
 "loop": true,
 "name": &"default",
@@ -41,26 +111,24 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ea27"]
-size = Vector2(11, 11)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_r5cos"]
-size = Vector2(22, 19)
+size = Vector2(12.5, 12.5)
 
 [node name="Meat chunk" type="CharacterBody2D"]
 script = ExtResource("1_tbvjr")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_ksisb")
+autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, -0.5)
+position = Vector2(0, 8)
 shape = SubResource("RectangleShape2D_7ea27")
 
 [node name="Meat chunk hit box" type="Area2D" parent="."]
 script = ExtResource("3_3bppu")
 
-[node name="Area2D" type="CollisionShape2D" parent="Meat chunk hit box"]
-position = Vector2(0, 0.5)
-shape = SubResource("RectangleShape2D_r5cos")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Meat chunk hit box"]
+position = Vector2(0, 8)
+shape = SubResource("RectangleShape2D_7ea27")
 
 [connection signal="area_entered" from="Meat chunk hit box" to="Meat chunk hit box" method="_on_area_entered"]
